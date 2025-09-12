@@ -1,0 +1,30 @@
+main {
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container .grid img {
+  width: 155px; /* ou qualquer tamanho desejado */
+  height: auto; /* mantém a proporção original */
+  border: 3px #00e0ff solid;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* exatamente 9 por linha */
+  gap: 10px; /* espaço entre as figuras */
+  justify-items: center; /* centraliza cada figure */
+}
+
+figcaption {
+  text-align: center;
+}

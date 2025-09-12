@@ -1,0 +1,36 @@
+main {
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ This allows items to move to the next line */
+}
+
+.desenho img {
+  width: 165px; /* ou qualquer tamanho desejado */
+  height: auto; /* mantém a proporção original */
+    border: 3px #00e0ff solid;
+  padding: 6px;
+}
+
+.cards img {
+  width: 170px; /* ou qualquer tamanho desejado */
+  height: auto; /* mantém a proporção original */
+    border: 3px #00e0ff solid;
+  padding: 6px;
+}
+
+.container img {
+  margin-right: 0.7em;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+figcaption {
+  text-align: center;
+}
