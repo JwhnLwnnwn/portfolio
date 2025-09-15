@@ -1,29 +1,29 @@
+/*Altera todos os itens dentro do main*/
 main {
   padding: 2%;
   align-items: center;
   justify-content: center;
-}
-
-/* MAIN CONTENT */
-
-main .main-content {
   display: flex;
   flex-direction: column;
 }
 
-main .main-content h2 {
+/* MAIN CONTENT */
+
+/*Texto h2 dentro do main*/
+main h2 {
   margin-bottom: 2%;
   font-size: 2.2em;
 }
 
-main .main-content .text p {
+/*Estilização dos textos dentro de article, dentro de main*/
+main article p {
   margin-bottom: 2%;
   width: 75%;
   font-size: 1.5em;
   font-weight: 300;
 }
 
-/*Botões*/
+/*Estilização dos botões, dentro do article, dentro do main*/
 main article a.btn {
   display: inline-block;
   border: none;
@@ -36,18 +36,21 @@ main article a.btn {
   text-decoration: none; /* remove underline */
 }
 
+/*Se o mouse for colocado sobre os botões, ativa efeito de sombreamento*/
 main article a.btn:hover{
   box-shadow: 0px 0px 4px #00e0ff;
 }
 
 /* ASIDE */
 
-main .techs .cards-container {
+/*Nos próximos três exemplos, section, entre main e .techs, poderia ser ignorado*/
+main section .techs .cards-container {
   display: flex;
   align-items: center;
 }
 
-main .techs .cards-container .card {
+/*Espaços com a classe card, dentro da div, são estilizados*/
+main section .techs .cards-container .card {
   width: 80px;
   height: 80px;
   padding: 10px;
@@ -61,7 +64,9 @@ main .techs .cards-container .card {
 
   transition: box-shadow 0.25s ease-in-out;
 }
-main .techs .cards-container .card img {
+
+/*Estilização das imagens dentro das classes card*/
+main section .techs .cards-container .card img {
   width: 90%;
 }
 

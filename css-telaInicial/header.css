@@ -1,3 +1,4 @@
+/*Estilização do cabeçalho*/
 header {
   background-color: #222;
   padding: 25px;
@@ -6,27 +7,31 @@ header {
   justify-content: space-between;
 }
 
+/*Estilização do texto h1, dentro do header*/
 header h1 {
   font-size: 2.8em;
   font-weight: 200;
 }
 
+/*Estilização da navegação, dentro do header*/
 header nav {
   display: flex;
   align-items: center;
 }
 
+/*Estilização dos links, dentro da navegação, dentro do header*/
 header nav a {
-  margin-right: 1.3em;
+  margin-right: 1.5em;
   font-size: 1.5em;
 }
 
+/*Alteração da cor dos textos e links dentro do header*/
 header h1,
 a {
   color: #00e0ff;
 }
 
-/*Atenção na semântica aqui*/
+/*Se o mouse for colocado sobre os links, dentro da navegação, dentro do header*/
 header nav a:hover {
   color: #fff;
 }

@@ -10,7 +10,7 @@ body { /*Alteração no escopo do body*/
   height: 100vh;
 
   background-color: #333;
-  color: #ffff;
+  color: #ffff; /*Altera a cor do texto*/
   display: flex; /*Torna todos os elementos dentro em peças flexíveis*/
   flex-direction: column; /*Ordena verticalmente os elementos (O padrão é horizontal)*/
   justify-content: space-between; /*Prende o cabeçalho e o rodapé no topo e fundo, o resto fica espaçado igualmente*/
@@ -18,5 +18,4 @@ body { /*Alteração no escopo do body*/
 
 a{ /*Alteração para os links*/
     text-decoration: none;
-    color: white;
 }

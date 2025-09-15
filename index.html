@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!--A maioria dos elementos no <head> não são visuais, são para armazenar dados-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
+
+    <!--Esse é o título do meu site-->
     <title>Portfólio</title>
+
+    <!--Estou unindo o meu html ao meu CSS (Tela Inicial)-->
     <link rel="stylesheet"
         href="./css-telaInicial/reset.css">
-    <!--Estou unindo o meu html ao meu CSS-->
     <link rel="stylesheet"
         href="./css-telaInicial/header.css">
     <link rel="stylesheet"
         href="./css-telaInicial/footer.css">
     <link rel="stylesheet"
         href="./css-telaInicial/main.css">
-    <!--Fontes utilizadas-->
+
+    <!--Fontes utilizadas (Referência os links oferecidos pelo Google Fonts)-->
     <link rel="preconnect"
         href="https://fonts.googleapis.com">
     <link rel="preconnect"
@@ -25,21 +31,26 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!--Ícones utilizados-->
+     <!--Ícone utilizado na aba do navegador e na navegação-->
     <script
         src="https://kit.fontawesome.com/493256260c.js"
         crossorigin="anonymous"
         defer></script>
-        <link rel="icon" type="image/png" href="img/icones/icone.png">
+    <link rel="icon" type="image/png"
+        href="img/icones/icone.png">
 </head>
 
-<!--class= é uma forma de criar uma identificação para o elemento ou sessão se tratado no CSS-->
+<!--class= é uma forma de criar uma identificação para elemento ou sessões-->
 
+<!--A parte visível do html-->
 <body>
+
+    <!--Cabeçalho (fica na parte superior)-->
     <header>
         <h1>Bem vindo ao meu portfólio!
         </h1>
         <nav>
+            <!--Navegação está dentro do cabeçalho e permitir transitar entre páginas-->
             <!--O _blank é para o link abrir uma aba-->
             <a href="https://www.linkedin.com/in/john-lennon-fernandes-5a835536b"
                 target="_blank"><i
@@ -47,11 +58,11 @@
         </nav>
     </header>
 
-    <!--Várias tags utilizadas aqui são para dividir os vários tipos de conteúdos por hierarquia-->
+    <!--Principal (fica no meio)-->
     <main>
-        <section class="main-content">
+        <section>
             <div class="sobre">
-                <article class="text">
+                <article>
                     <h2>☝🏻Sobre mim</h2>
                     <p>Olá! Me chamo
                         <b>John Lennon
@@ -95,18 +106,20 @@
                         apenas está
                         curioso, confira
                         alguns dos meus
-                        projetos clicando nos botões abaixo:
+                        projetos clicando
+                        nos botões abaixo:
                     </p>
+
                     <!--Botões-->
                     <a href="./projetos/animacoes.html"
                         class="btn">Animações</a>
-                        
+
                     <a href="./projetos/pixelArt.html"
                         class="btn">Pixel
                         Art</a>
-                    </button>
-                    </a>
                 </article>
+
+                <!--Tag semântica para declarar imagem-->
                 <figure>
                     <img src="./img/outros/foto.png"
                         alt="Imagem de John">
@@ -118,7 +131,10 @@
                     <!--O que é esse alt?-->
                 </figure>
             </div>
+
             <br>
+
+            <!--Elementos secundários (está dentro de section, junto de article)-->
             <aside class="techs">
                 <h2>🖥️ Tecnologias
                 </h2>
@@ -143,6 +159,7 @@
         </section>
     </main>
 
+    <!--Rodapé (fica na de baixo)-->
     <footer>
         <span>
             &copy; John Lennon Fernandes de
