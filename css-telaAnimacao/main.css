@@ -11,6 +11,13 @@ main section .container {
   flex-wrap: wrap; /* ✅ This allows items to move to the next line */
 }
 
+.anim img{
+    width: 320px; /* ou qualquer tamanho desejado */
+  height: auto; /* mantém a proporção original */
+    border: 3px #00e0ff solid;
+  padding: 6px;
+}
+
 .desenho img {
   width: 165px; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
