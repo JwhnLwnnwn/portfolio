@@ -12,32 +12,35 @@ main section .container {
 }
 
 .anim img{
-    width: 320px; /* ou qualquer tamanho desejado */
+  max-width: 100%;
+    width: 20em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
     border: 3px #00e0ff solid;
-  padding: 6px;
+  padding: 0.375em;
 }
 
 .desenho img {
-  width: 165px; /* ou qualquer tamanho desejado */
+  max-width: 100%;
+  width: 10.31em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
     border: 3px #00e0ff solid;
-  padding: 6px;
+  padding: 0.375em;
 }
 
 .cards img {
-  width: 170px; /* ou qualquer tamanho desejado */
+  width: 10.625em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
     border: 3px #00e0ff solid;
-  padding: 6px;
+  padding: 0.375em;
 }
 
 .container img {
   margin-right: 0.7em;
-  border-radius: 8px;
-  padding: 4px;
+  border-radius: 0.5em;
+  padding: 0.25em;
 }
 
 figcaption {
   text-align: center;
 }
+
