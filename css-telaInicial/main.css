@@ -1,6 +1,5 @@
 /*Altera todos os itens dentro do main*/
 main {
-  align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -76,7 +75,7 @@ main section .techs .cards-container .card img {
   display: flex;
   width: 100%;
   height: 400px;
-  background-image: url("/img/animacoes/MortedeHaku.gif");
+  background-image: url("https://github.com/JwhnLwnnwn/portfolio/blob/main/img/animacoes/MortedeHaku.gif?raw=true");
   background-size: cover;
   background-position: 50% 80%;
   background-repeat: no-repeat;
