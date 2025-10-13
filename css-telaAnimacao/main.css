@@ -11,11 +11,11 @@ main section .container {
   flex-wrap: wrap; /* ✅ This allows items to move to the next line */
 }
 
-.anim img{
+.anim img {
   max-width: 100%;
-    width: 20em; /* ou qualquer tamanho desejado */
+  width: 20em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
-    border: 3px #00e0ff solid;
+  border: 3px #00e0ff solid;
   padding: 0.375em;
 }
 
@@ -23,14 +23,14 @@ main section .container {
   max-width: 100%;
   width: 10.31em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
-    border: 3px #00e0ff solid;
+  border: 3px #00e0ff solid;
   padding: 0.375em;
 }
 
 .cards img {
   width: 10.625em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
-    border: 3px #00e0ff solid;
+  border: 3px #00e0ff solid;
   padding: 0.375em;
 }
 
@@ -44,3 +44,9 @@ figcaption {
   text-align: center;
 }
 
+.vertical img {
+  width: 8.625em; /* ou qualquer tamanho desejado */
+  height: auto; /* mantém a proporção original */
+  border: 3px #00e0ff solid;
+  padding: 0.375em;
+}
