@@ -1,6 +1,5 @@
 /*Altera todos os itens dentro do main*/
 main {
-  padding: 2%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -38,7 +37,7 @@ main article a.btn {
 }
 
 /*Se o mouse for colocado sobre os botões, ativa efeito de sombreamento*/
-main article a.btn:hover{
+main article a.btn:hover {
   transform: scale(1.04);
   box-shadow: 0px 0px 4px #00e0ff;
 }
@@ -72,6 +71,20 @@ main section .techs .cards-container .card img {
   width: 90%;
 }
 
+.bg-gif {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-image: url("/img/animacoes/MortedeHaku.gif");
+  background-size: cover;
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  filter: brightness(0.4);
+  justify-content: center;
+  transition: height 0.3s ease; /* isso é pra transição suave entre os tamanhos */
+}
 /* FIGURE */
 
 main figure {
@@ -90,10 +103,17 @@ main figure img {
   border: 1px #00e0ff solid;
 }
 
-main section .sobre{
+main section .sobre {
+  position: relative;
+  margin-top: -15%;
   display: flex;
   flex-direction: row;
   gap: 5rem;
+  padding: 2%;
+}
+
+main section .techs {
+  padding: 2%;
 }
 
 @media screen and (max-width: 768px) {
@@ -101,6 +121,7 @@ main section .sobre{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding: 2%;
   }
 
   main figure {
@@ -109,5 +130,9 @@ main section .sobre{
 
   main article p {
     width: 100%;
+  }
+
+ .bg-gif {
+    height: 20rem;
   }
 }
