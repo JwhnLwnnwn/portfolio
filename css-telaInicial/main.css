@@ -75,7 +75,7 @@ main section .techs .cards-container .card img {
   display: flex;
   width: 100%;
   height: 400px;
-  background-image: url("https://raw.githubusercontent.com/JwhnLwnnwn/portfolio/main/img/animacoes/MortedeHaku.gif");
+  background-image: url("https://github.com/JwhnLwnnwn/portfolio/blob/main/img/animacoes/MortedeHaku.gif?raw=true");
   background-size: cover;
   background-position: 50% 80%;
   background-repeat: no-repeat;
