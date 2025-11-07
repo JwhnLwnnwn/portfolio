@@ -33,7 +33,7 @@ main section .container {
 
 .desenho img {
   max-width: 100%;
-  width: 10.31em; /* ou qualquer tamanho desejado */
+  width: 10.35em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
   border: 3px #00e0ff solid;
   padding: 0.375em;
