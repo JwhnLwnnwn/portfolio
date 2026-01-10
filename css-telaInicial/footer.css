@@ -1,6 +1,6 @@
 footer{
-    background-color: #222 ;
-    padding: 2px;
+    background-color: #181818 ;
+    padding: 0.6rem;
 
     display: flex;
     align-items: center;
@@ -11,4 +11,5 @@ footer{
 footer span{
     font-size: 0.8em;
     font-weight: 200;
+    color: #909090;
 }

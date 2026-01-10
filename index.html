@@ -1,189 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--A maioria dos elementos no <head> não são visuais, são para armazenar dados-->
+  <!--A maioria dos elementos no <head> não são visuais, são para armazenar dados-->
 
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preload" as="image"
-        href="https://raw.githubusercontent.com/JwhnLwnnwn/portfolio/main/img/animacoes/MortedeHaku.gif">
+    <link
+      rel="preload"
+      as="image"
+      href="https://raw.githubusercontent.com/JwhnLwnnwn/portfolio/main/img/animacoes/MortedeHaku.gif"
+    />
 
     <!--Esse é o título do meu site-->
     <title>Portfólio</title>
 
     <!--Estou unindo o meu html ao meu CSS (Tela Inicial)-->
-    <link rel="stylesheet"
-        href="./css-telaInicial/reset.css" />
-    <link rel="stylesheet"
-        href="./css-telaInicial/header.css" />
-    <link rel="stylesheet"
-        href="./css-telaInicial/footer.css" />
-    <link rel="stylesheet"
-        href="./css-telaInicial/main.css" />
+    <link rel="stylesheet" href="./css-telaInicial/reset.css" />
+    <link rel="stylesheet" href="./css-telaInicial/header.css" />
+    <link rel="stylesheet" href="./css-telaInicial/footer.css" />
+    <link rel="stylesheet" href="./css-telaInicial/main.css" />
 
     <!--Fontes utilizadas (Referência os links oferecidos pelo Google Fonts)-->
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com" />
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--Ícone utilizado na aba do navegador e na navegação-->
     <script
-        src="https://kit.fontawesome.com/493256260c.js"
-        crossorigin="anonymous"
-        defer></script>
-    <link rel="icon" type="image/png"
-        href="img/icones/icone.png" />
-</head>
+      src="https://kit.fontawesome.com/493256260c.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="icon" type="image/png" href="img/icones/icone.png" />
+  </head>
 
-<!--class= é uma forma de criar uma identificação para elemento ou sessões-->
+  <!--class= é uma forma de criar uma identificação para elemento ou sessões-->
 
-<!--A parte visível do html-->
+  <!--A parte visível do html-->
 
-<body>
-    <!--Cabeçalho (fica na parte superior)-->
-    <header>
-        <h1>Bem vindo ao meu portfólio!
-        </h1>
-        <nav>
-            <!--Navegação está dentro do cabeçalho e permitir transitar entre páginas-->
-            <!--O _blank é para o link abrir uma aba-->
-            <a href="https://www.linkedin.com/in/john-lennon-fernandes-5a835536b"
-                target="_blank"
-                rel="noopener noreferrer"><i
-                    class="fa-brands fa-linkedin"></i></a>
-        </nav>
-    </header>
-
+  <body>
     <!--Principal (fica no meio)-->
     <main>
-        <div class="bg-gif"></div>
-        <section>
-            <div class="sobre">
-                <!--Tag semântica para declarar imagem-->
-                <figure>
-                    <img src="./img/outros/foto.png"
-                        alt="Imagem de John" />
-                    <figcaption>John Lennon
-                        Fernandes de
-                        Andrade
-                    </figcaption>
-                    <!--figcaption é apenas a legenda-->
-                    <!--O que é esse alt?-->
-                </figure>
-                <article>
-                    <h2>☝🏻Sobre mim</h2>
-                    <p>
-                        Olá! Me chamo
-                        <b>John Lennon
-                            Fernandes de
-                            Andrade</b>,
-                        tenho 20
-                        anos e sou morador
-                        de Fortaleza.
-                        Alguns dos meus
-                        interesses
-                        preferidos são
-                        <b>animação</b> e
-                        <b> pixel art</b>;
-                        além de
-                        apredizados mais
-                        recentes, como o
-                        front-end que
-                        apliquei aqui
-                        mesmo nesse site!
-                        <br /><br />
-                        Desde os 18 anos me
-                        interesso por
-                        animação 2D e criei
-                        vários
-                        protótipos que
-                        ajudaram a
-                        fundamentar os
-                        conhecimentos que
-                        tenho
-                        hoje, o que também
-                        me permitiu trazer
-                        mais vida aos
-                        sprites que
-                        criei.
-                        <br /><br />A
-                        animação e a pixel
-                        art são as minhas
-                        duas
-                        grandes paixões. Se
-                        você compartilha
-                        desse sentimento ou
-                        apenas
-                        está curioso,
-                        confira alguns dos
-                        meus projetos
-                        clicando nos botões
-                        abaixo:
-                    </p>
-                    <h2>Projetos</h2>
+      <div class="bg-gif"></div>
+      <section>
+        <div class="sobre">
+          <!--Tag semântica para declarar imagem-->
+          <figure>
+            <img src="./img/outros/foto.png" alt="Imagem de John" />
+            <figcaption>John Lennon Fernandes de Andrade</figcaption>
+            <p>Pixel Artist | Front-end enthusiast</p>
+            <div class="social-medias-line">
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/in/john-lennon-fernandes-5a835536b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social linkedin"
+                aria-label="Perfil do LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a
+                href="mailto:johnlennonfernandes7@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social gmail"
+                aria-label="Enviar um email para John"
+              >
+                <i class="fa fa-envelope-o fa-fw"></i>
+              </a>
+            </div>
+            <!--figcaption é apenas a legenda-->
+            <!--O que é esse alt?-->
+          </figure>
+          <article>
+            <h2>Sobre mim</h2>
+            <p>
+              Olá! Me chamo
+              <b>John Lennon Fernandes de Andrade</b>, tenho 20 anos e sou
+              morador de Fortaleza. Alguns dos meus interesses preferidos são
+              <b>animação</b> e <b> pixel art</b>; além de apredizados mais
+              recentes, como o front-end que apliquei aqui mesmo nesse site!
+              <br /><br />
+              Desde os 18 anos me interesso por animação 2D e criei vários
+              protótipos que ajudaram a fundamentar os conhecimentos que tenho
+              hoje, o que também me permitiu trazer mais vida aos sprites que
+              criei.
+              <br /><br />A animação e a pixel art são as minhas duas grandes
+              paixões. Se você compartilha desse sentimento ou apenas está
+              curioso, confira alguns dos meus projetos clicando nos botões
+              abaixo:
+            </p>
+            <h2>Projetos</h2>
 
-                    <!--Botões-->
-                    <a href="./projetos/animacoes.html"
-                        class="btn">Animações</a>
+            <!--Botões-->
+            <a href="./projetos/animacoes.html" class="btn">Animações</a>
 
-                    <a href="./projetos/pixelArt.html"
-                        class="btn">Pixel
-                        Art</a>
-                </article>
+            <a href="./projetos/pixelArt.html" class="btn">Pixel Arts</a>
+          </article>
+        </div>
+
+        <br />
+
+        <!--Elementos secundários (está dentro de section, junto de article)-->
+        <aside class="techs">
+          <h2>🖥️ Tecnologias</h2>
+          <div class="cards-container">
+            <div class="card">
+              <img src="./img/techs/animate.png" alt="logo do Adobe Animate" />
             </div>
 
-            <br />
+            <div class="card">
+              <img
+                src="./img/techs/photoshop.png"
+                alt="logo do Adobe Photoshop"
+              />
+            </div>
 
-            <!--Elementos secundários (está dentro de section, junto de article)-->
-            <aside class="techs">
-                <h2>🖥️ Tecnologias</h2>
-                <div
-                    class="cards-container">
-                    <div class="card">
-                        <img src="./img/techs/animate.png"
-                            alt="logo do Adobe Animate" />
-                    </div>
+            <div class="card">
+              <img src="./img/techs/aseprite.png" alt="logo do Aseprite" />
+            </div>
 
-                    <div class="card">
-                        <img src="./img/techs/photoshop.png"
-                            alt="logo do Adobe Photoshop" />
-                    </div>
+            <div class="card">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                alt="Logo do HTML"
+              />
+            </div>
 
-                    <div class="card">
-                        <img src="./img/techs/aseprite.png"
-                            alt="logo do Aseprite" />
-                    </div>
-
-                    <div class="card">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                            alt="Logo do HTML" />
-                    </div>
-
-                    <div class="card">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                            alt="Logo do HTML" />
-                    </div>
-                </div>
-            </aside>
-        </section>
+            <div class="card">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                alt="Logo do HTML"
+              />
+            </div>
+          </div>
+        </aside>
+      </section>
     </main>
 
     <!--Rodapé (fica na de baixo)-->
     <footer>
-        <span>
-            &copy; John Lennon Fernandes de
-            Andrade, 2025. Todos os
-            direitos
-            reservados.
-        </span>
+      <span>
+        &copy; John Lennon Fernandes de Andrade, 2025. Todos os direitos
+        reservados.
+      </span>
     </footer>
-</body>
-
+  </body>
 </html>
