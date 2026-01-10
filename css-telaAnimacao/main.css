@@ -1,14 +1,13 @@
 main {
+  flex: 1;
   padding: 2%;
-  align-items: center;
-  justify-content: center;
 }
 
-main section .container {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* ✅ This allows items to move to the next line */
+  flex-wrap: wrap;
 }
 
 .anim img {
@@ -19,15 +18,15 @@ main section .container {
   padding: 0.375em;
 }
 
-.cards{
+.cards {
   padding: 0.5rem;
 }
 
-.desenho{
+.desenho {
   padding: 0.5rem;
 }
 
-.vertical{
+.vertical {
   padding: 0.5rem;
 }
 

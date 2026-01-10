@@ -1,5 +1,7 @@
+/* Isso aqui é um estilo genérico de header, se quiser usar esse mesmo estilo em um header qualquer, é só passar o css pra página que usa */
+
 header {
-  background-color: #222;
+  background-color: #1d1d1d;
   padding: 1.56em;
   display: flex;
   align-items: center;
@@ -7,7 +9,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.8em;
+  font-size: 2rem;
   font-weight: 200;
 }
 
@@ -17,13 +19,13 @@ header nav {
 }
 
 header nav a {
-  margin-right: 2em;
+  margin-right: 2.8em;
   font-size: 1.2em;
 }
 
 header h1,
 a {
-  color: #00e0ff;
+  color: #0e88c0;
 }
 
 /*Atenção na semântica aqui*/
