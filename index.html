@@ -49,7 +49,7 @@
       <section>
         <div class="sobre">
           <!--Tag semântica para declarar imagem-->
-          <figure>
+          <figure class="photo">
             <img src="./img/outros/foto.png" alt="Imagem de John" />
             <figcaption>John Lennon Fernandes de Andrade</figcaption>
             <p>Pixel Artist | Front-end enthusiast</p>
@@ -78,7 +78,7 @@
             <!--figcaption é apenas a legenda-->
             <!--O que é esse alt?-->
           </figure>
-          <article>
+          <article class="art-sobre">
             <h2>Sobre mim</h2>
             <p>
               Olá! Me chamo
@@ -96,51 +96,83 @@
               curioso, confira alguns dos meus projetos clicando nos botões
               abaixo:
             </p>
-            <h2>Projetos</h2>
+            <!--Elementos secundários (está dentro de section, junto de article)-->
+            <div class="techs">
+              <h2>Tecnologias</h2>
+              <div class="cards-container">
+                <div class="card">
+                  <img
+                    src="./img/techs/animate.png"
+                    alt="logo do Adobe Animate"
+                  />
+                </div>
 
-            <!--Botões-->
-            <a href="./projetos/animacoes.html" class="btn">Animações</a>
+                <div class="card">
+                  <img
+                    src="./img/techs/photoshop.png"
+                    alt="logo do Adobe Photoshop"
+                  />
+                </div>
 
-            <a href="./projetos/pixelArt.html" class="btn">Pixel Arts</a>
+                <div class="card">
+                  <img src="./img/techs/aseprite.png" alt="logo do Aseprite" />
+                </div>
+
+                <div class="card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    alt="Logo do HTML"
+                  />
+                </div>
+
+                <div class="card">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    alt="Logo do HTML"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <section class="ilustracoes">
+              <h2>Ilustrações</h2>
+
+              <!--Botões-->
+              <a href="./projetos/animacoes.html" class="btn">Animações</a>
+
+              <a href="./projetos/pixelArt.html" class="btn">Pixel Arts</a>
+            </section>
           </article>
         </div>
 
         <br />
+      </section>
 
-        <!--Elementos secundários (está dentro de section, junto de article)-->
-        <aside class="techs">
-          <h2>🖥️ Tecnologias</h2>
-          <div class="cards-container">
-            <div class="card">
-              <img src="./img/techs/animate.png" alt="logo do Adobe Animate" />
-            </div>
+      <section class="destaques">
+        <h2>Projetos destaques</h2>
 
-            <div class="card">
-              <img
-                src="./img/techs/photoshop.png"
-                alt="logo do Adobe Photoshop"
-              />
-            </div>
-
-            <div class="card">
-              <img src="./img/techs/aseprite.png" alt="logo do Aseprite" />
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                alt="Logo do HTML"
-              />
-            </div>
-
-            <div class="card">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                alt="Logo do HTML"
-              />
-            </div>
+        <div class="destaques-grid">
+          <div class="grid-item">
+            <video controls controlsList="nodownload">
+              <source src="/assets/vds/inferno.mp4" type="video/mp4" />
+            </video>
+            <h3>A shattered illusion</h3>
+            <p> Animação feita no Aseprite</p>
           </div>
-        </aside>
+
+          <div class="grid-item details">
+            <div class="imgs">
+              <img src="/assets/capas/sentinelas/sentinelas_2.PNG" />
+              <img src="/assets/capas/sentinelas/sentinelas_3.PNG" />
+            </div>
+            <h3>Sentinelas da Praia</h3>
+            <p>
+              Protótipo do gênero tower defense, em uma equipe de 5 integrantes
+              para a primeira Gamejam CE - Mar de ideias. O projeto foi premiado
+              na Feira do Conhecimento 2025, alcançando o terceiro lugar. Atuei como artista, animador e game designer.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
