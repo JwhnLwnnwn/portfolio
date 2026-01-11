@@ -50,6 +50,7 @@ main article a.btn:hover {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
+  padding-left: 30rem;
 }
 
 /* ASIDE */
