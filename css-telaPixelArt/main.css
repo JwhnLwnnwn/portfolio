@@ -20,7 +20,7 @@ main section .grid-container {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* exatamente 9 por linha */
+  grid-template-columns: repeat(6, 1fr); /* exatamente 6 por linha */
   gap: 1rem; /* espaço entre as figuras */
   justify-items: center; /* centraliza cada figure */
 }
