@@ -36,7 +36,9 @@ main article a.btn {
   color: #00e0ff;
   cursor: pointer;
   text-decoration: none; /* remove underline */
-  transition: box-shadow 0.4s ease-in-out, transform 0.3s ease;
+  transition:
+    box-shadow 0.4s ease-in-out,
+    transform 0.3s ease;
 }
 
 /*Se o mouse for colocado sobre os botões, ativa efeito de sombreamento*/
@@ -86,7 +88,7 @@ main section .cards-container .card img {
   display: flex;
   width: 100%;
   height: 400px;
-  background-image: url('../img/animacoes/leeGaara.gif?=v1');
+  background-image: url("../img/animacoes/leeGaara.gif?=v1");
   background-size: cover;
   background-position: 50% 90%;
   background-repeat: no-repeat;
@@ -143,7 +145,9 @@ main figure img {
   text-decoration: none;
   font-size: 28px;
 
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-social:hover {
@@ -184,6 +188,17 @@ main section .sobre {
   gap: 1rem;
 }
 
+.grid-item a,
+.grid-item h3 {
+  color: #cf650d;
+}
+
+.grid-item a:hover,
+.grid-item h3:hover {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+
 .grid-item {
   display: flex;
   flex-direction: column;
@@ -194,7 +209,9 @@ main section .sobre {
   padding: 1rem;
   color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .grid-item p {
@@ -227,7 +244,7 @@ main section .sobre {
   border-radius: 5px;
 }
 
-.grid-item.details { 
+.grid-item.details {
   grid-column: span 2;
 }
 
