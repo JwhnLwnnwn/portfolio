@@ -113,6 +113,7 @@ main figure {
 main figure p {
   color: #a8a8a8;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 main figure figcaption {

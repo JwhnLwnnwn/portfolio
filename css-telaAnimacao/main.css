@@ -15,7 +15,11 @@ main {
   width: 20em; /* ou qualquer tamanho desejado */
   height: auto; /* mantém a proporção original */
   border: 3px #00e0ff solid;
-  padding: 0.375em;
+}
+
+.anim figcaption {
+  text-align: center;
+  padding: 0 0 0.5rem 0;
 }
 
 .cards {
