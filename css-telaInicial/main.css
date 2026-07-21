@@ -20,7 +20,7 @@ main h3 {
 
 /*Estilização dos textos dentro de article, dentro de main*/
 main article p {
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   width: 75%;
   font-size: 1.5em;
   font-weight: 300;
@@ -45,6 +45,15 @@ main article a.btn {
 main article a.btn:hover {
   transform: scale(1.04);
   box-shadow: 0px 0px 4px #00e0ff;
+}
+
+section .ilustracoes {
+  margin-bottom: 1%;
+}
+
+article .producoes p {
+  color: #a8a8a8;
+  font-size: 1rem;
 }
 
 /* Tecnologias */
@@ -172,8 +181,6 @@ main section .sobre {
 .art-sobre {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-
   width: 100%;
 }
 
