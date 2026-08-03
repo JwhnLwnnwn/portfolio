@@ -1,13 +1,11 @@
 main {
-  flex: 1;
-  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main section .grid-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.grid-container {
+  transform: translateY(-40px);
 }
 
 .grid-container .grid img {
