@@ -1,59 +1,83 @@
+/*Altera todos os itens dentro do main*/
 main {
-  padding: 2%;
-  align-items: center;
+  flex: 1;
   justify-content: center;
+  flex-direction: column;
 }
 
 /* MAIN CONTENT */
 
-main .main-content {
-  display: flex;
-  flex-direction: column;
-}
-
-main .main-content h2 {
-  margin-bottom: 2%;
+/*Texto h2 dentro do main*/
+main h2 {
   font-size: 2.2em;
 }
 
-main .main-content .text p {
-  margin-bottom: 2%;
+main h3 {
+  font-size: 1.8rem;
+  color: #cf650d;
+}
+
+/*Estilização dos textos dentro de article, dentro de main*/
+main article p {
+  margin-bottom: 1%;
   width: 75%;
   font-size: 1.5em;
   font-weight: 300;
 }
 
-/*Botões*/
+/*Estilização dos botões, dentro do article, dentro do main*/
 main article a.btn {
   display: inline-block;
   border: none;
-  margin-right: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #222;
+  background-color: #161616;
   color: #00e0ff;
   cursor: pointer;
   text-decoration: none; /* remove underline */
+  transition:
+    box-shadow 0.4s ease-in-out,
+    transform 0.3s ease;
 }
 
-main article a.btn:hover{
+/*Se o mouse for colocado sobre os botões, ativa efeito de sombreamento*/
+main article a.btn:hover {
+  transform: scale(1.04);
   box-shadow: 0px 0px 4px #00e0ff;
+}
+
+section .ilustracoes {
+  margin-bottom: 1%;
+}
+
+article .producoes p {
+  color: #a8a8a8;
+  font-size: 1rem;
+}
+
+/* Tecnologias */
+.techs {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 /* ASIDE */
 
-main .techs .cards-container {
+/*Nos próximos três exemplos, section, entre main e .techs, poderia ser ignorado*/
+main section .cards-container {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
-main .techs .cards-container .card {
-  width: 80px;
-  height: 80px;
-  padding: 10px;
+/*Espaços com a classe card, dentro da div, são estilizados*/
+main section .cards-container .card {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
   background-color: #eee;
   border-radius: 8px;
-  margin-right: 1.8em;
 
   display: flex;
   align-items: center;
@@ -61,11 +85,31 @@ main .techs .cards-container .card {
 
   transition: box-shadow 0.25s ease-in-out;
 }
-main .techs .cards-container .card img {
+
+/*Estilização das imagens dentro das classes card*/
+main section .cards-container .card img {
   width: 90%;
 }
 
+.bg-gif {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-image: url("../img/animacoes/leeGaara.gif?=v1");
+  background-size: cover;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  filter: brightness(0.4);
+  justify-content: center;
+  transition: height 0.3s ease; /* isso é pra transição suave entre os tamanhos */
+}
 /* FIGURE */
+
+.photo {
+  align-items: center;
+}
 
 main figure {
   display: flex;
@@ -74,16 +118,188 @@ main figure {
   justify-content: center;
 }
 
-main figure img {
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
-
-  margin-bottom: 6%;
-  border: 1px #00e0ff solid;
+main figure p {
+  color: #a8a8a8;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
-main section .sobre{
+main figure figcaption {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+main figure img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 400px;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  border: 1px #045c68 solid;
+}
+
+/* Botao do linkedin fora do header - Embaixo da figure */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 8px;
+  background-color: #105b79;
+  color: #fff;
+
+  text-decoration: none;
+  font-size: 28px;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-social:hover {
+  background-color: #002d57;
+}
+
+.btn-social:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+main section .sobre {
+  position: relative;
+  margin-top: -15%;
   display: flex;
   flex-direction: row;
+  gap: 8rem;
+  padding: 2%;
+}
+
+.art-sobre {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.destaques {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 80%));
+  justify-content: center;
+  gap: 1rem;
+}
+
+.grid-item .imgs {
+  display: flex;
+  justify-items: center;
+}
+
+.proposal-img {
+  width: 33rem !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.grid-item a,
+.grid-item h3 {
+  color: #cf650d;
+}
+
+.grid-item a:hover, .grid-item h3:hover {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #161616;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.grid-item p {
+  font-size: 1.2rem;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.653);
+}
+
+.grid-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  max-height: 400px;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.imgs img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.grid-item.details {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 768px) {
+  main section .sobre {
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2%;
+  }
+
+  .imgs {
+    flex-direction: column;
+  }
+
+  .imgs img {
+    width: 100%;
+  }
+
+  main figure {
+    align-items: start;
+  }
+
+  main article p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .bg-gif {
+    height: 20rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
 }
