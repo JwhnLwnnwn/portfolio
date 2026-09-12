@@ -9,6 +9,7 @@ main {
 
 /*Texto h2 dentro do main*/
 main h2 {
+  padding-bottom: 1%;
   font-size: 2.2em;
 }
 
