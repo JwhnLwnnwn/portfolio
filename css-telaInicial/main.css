@@ -175,7 +175,7 @@ main section .sobre {
   display: flex;
   flex-direction: row;
   gap: 8rem;
-  padding: 2% 2% 2% 4%;
+  padding: 2% 2% 2% 4.5%;
 }
 
 .art-sobre {
