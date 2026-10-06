@@ -1,8 +1,11 @@
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css");
+
 /*Altera todos os itens dentro do main*/
 main {
   flex: 1;
   justify-content: center;
   flex-direction: column;
+  gap: 1rem;
 }
 
 /* MAIN CONTENT */
@@ -18,7 +21,6 @@ main h3 {
   color: #cf650d;
 }
 
-/*Estilização dos textos dentro de article, dentro de main*/
 main article p {
   margin-bottom: 1%;
   width: 75%;
@@ -26,7 +28,6 @@ main article p {
   font-weight: 300;
 }
 
-/*Estilização dos botões, dentro do article, dentro do main*/
 main article a.btn {
   display: inline-block;
   border: none;
@@ -35,63 +36,93 @@ main article a.btn {
   background-color: #161616;
   color: #00e0ff;
   cursor: pointer;
+  font-size: 1.6rem;
   text-decoration: none; /* remove underline */
   transition:
     box-shadow 0.4s ease-in-out,
     transform 0.3s ease;
 }
 
-/*Se o mouse for colocado sobre os botões, ativa efeito de sombreamento*/
 main article a.btn:hover {
   transform: scale(1.04);
   box-shadow: 0px 0px 4px #00e0ff;
 }
 
+main .ilustracoes {
+  gap: 0.5rem;
+}
+
+section.ilustracoes,
 section .ilustracoes {
   margin-bottom: 1%;
 }
 
+article.producoes p,
 article .producoes p {
   color: #a8a8a8;
   font-size: 1rem;
 }
 
-/* Tecnologias */
+/* TECNOLOGIAS */
+
 .techs {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
 }
 
-/* ASIDE */
-
-/*Nos próximos três exemplos, section, entre main e .techs, poderia ser ignorado*/
 main section .cards-container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #161616;
+  border-radius: 0.5rem;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease;
 }
 
-/*Espaços com a classe card, dentro da div, são estilizados*/
-main section .cards-container .card {
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  background-color: #eee;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: box-shadow 0.25s ease-in-out;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-/*Estilização das imagens dentro das classes card*/
-main section .cards-container .card img {
-  width: 90%;
+.card i {
+  font-size: 2rem;
 }
 
+/* PNGs e SVG do Affinity */
+.card img,
+.brand-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* BACKGROUND ANIMADO */
 .bg-gif {
   position: relative;
   display: flex;
@@ -104,12 +135,28 @@ main section .cards-container .card img {
   overflow: hidden;
   filter: brightness(0.4);
   justify-content: center;
-  transition: height 0.3s ease; /* isso é pra transição suave entre os tamanhos */
+  transition: height 0.3s ease;
 }
-/* FIGURE */
 
+/* FIGURE */
 .photo {
   align-items: center;
+}
+
+.photo img {
+  border-radius: 30rem;
+}
+
+.profile figcaption,
+.profile.figcaption {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profile .description,
+.profile.description {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 main figure {
@@ -132,28 +179,25 @@ main figure figcaption {
 
 main figure img {
   width: 20rem;
-  height: 20rem;
-  border-radius: 400px;
+  border-radius: 8px;
   margin-top: 6%;
   margin-bottom: 2%;
-  border: 1px #045c68 solid;
 }
 
-/* Botao do linkedin fora do header - Embaixo da figure */
 .btn-social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 38px;
-  height: 38px;
+  width: 3rem;
+  height: 3rem;
 
   border-radius: 8px;
   background-color: #105b79;
   color: #fff;
 
   text-decoration: none;
-  font-size: 28px;
+  font-size: 2rem;
 
   transition:
     background-color 0.2s ease,
@@ -161,7 +205,7 @@ main figure img {
 }
 
 .btn-social:hover {
-  background-color: #002d57;
+  background-color: #045c79;
 }
 
 .btn-social:focus {
@@ -169,33 +213,47 @@ main figure img {
   outline-offset: 2px;
 }
 
-main section .sobre {
-  position: relative;
-  margin-top: -15%;
-  display: flex;
-  flex-direction: row;
-  gap: 8rem;
-  padding: 2% 2% 2% 4.5%;
-}
-
 .art-sobre {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
+
+.art-sobre h1,
+.art-sobre h2,
+.art-sobre p {
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+main section.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* DESTAQUES */
 
 .destaques {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 1rem;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  width: 80%;
+  margin-inline: auto;
 }
 
 .destaques-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 80%));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 100%));
   justify-content: center;
   gap: 1rem;
 }
@@ -213,11 +271,12 @@ main section .sobre {
 
 .grid-item a,
 .grid-item h3 {
-  color: #cf650d;
+  color: #d86c3a;
 }
 
-.grid-item a:hover, .grid-item h3:hover {
-  color: #00e0ff;
+.grid-item a:hover,
+.grid-item h3:hover {
+  color: #a53f10;
   text-decoration: underline;
 }
 
@@ -263,7 +322,8 @@ main section .sobre {
 
 .imgs img {
   width: 50%;
-  height: auto;
+  height: 21.25rem;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -271,12 +331,100 @@ main section .sobre {
   grid-column: span 2;
 }
 
-@media screen and (max-width: 768px) {
-  main section .sobre {
-    align-items: center;
+/* Estilo padrão (Mobile) */
+main section.header .sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2%;
+}
+
+/* Mobile */
+main section.header .sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2%;
+}
+
+.art-sobre {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+  main section.header .sobre {
+    display: flex;
     flex-direction: column;
+    position: relative;
     gap: 2rem;
     padding: 2%;
+    align-items: center;
+    margin-top: -15%;
+    width: 80%;
+  }
+
+  .art-sobre {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .profile figcaption,
+  .profile.figcaption {
+    font-size: 2rem;
+  }
+
+  .profile .description,
+  .profile.description {
+    font-size: 1.7rem;
+  }
+
+  .btn-social {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1278px) {
+  main section.header .sobre {
+    position: relative;
+    margin-top: -15%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+
+    width: 80%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ilustracoes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ilustracoes .btn {
+    padding: 0.8rem;
+  }
+
+  .btn-social {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
   }
 
   .imgs {
@@ -292,7 +440,7 @@ main section .sobre {
   }
 
   main article p {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     width: 100%;
   }
 
@@ -301,6 +449,6 @@ main section .sobre {
   }
 
   main h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 }
