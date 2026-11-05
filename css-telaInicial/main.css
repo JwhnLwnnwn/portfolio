@@ -327,6 +327,8 @@ main section.header {
   border-radius: 5px;
 }
 
+/* Atenção: o grid tem 1 coluna no desktop, então "span 2" pode criar uma coluna implícita.
+   Remova se não for intencional. */
 .grid-item.details {
   grid-column: span 2;
 }
@@ -421,6 +423,10 @@ main section.header .sobre {
     width: 4rem;
     height: 4rem;
     font-size: 2.5rem;
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
   }
 
   .destaques-grid {
