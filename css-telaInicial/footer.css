@@ -1,15 +1,32 @@
-footer{
-    background-color: #181818 ;
-    padding: 0.6rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.5rem;
+  padding: 2rem 1rem;
+  background-color: #161616;
+  overflow: hidden;
+  text-align: center;
 }
 
-/*Altera o texto do footer*/
-footer span{
-    font-size: 0.8em;
-    font-weight: 200;
-    color: #909090;
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/animacoes/leeGaara.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.45;
+  z-index: 0;
+  background-position: 50% 80%;
+}
+
+footer span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
