@@ -36,6 +36,7 @@ main article a.btn {
   background-color: #161616;
   color: #00e0ff;
   cursor: pointer;
+  font-size: 1.6rem;
   text-decoration: none; /* remove underline */
   transition:
     box-shadow 0.4s ease-in-out,
@@ -45,6 +46,10 @@ main article a.btn {
 main article a.btn:hover {
   transform: scale(1.04);
   box-shadow: 0px 0px 4px #00e0ff;
+}
+
+main .ilustracoes {
+  gap: 0.5rem;
 }
 
 section.ilustracoes,
@@ -138,6 +143,10 @@ main section .cards-container {
   align-items: center;
 }
 
+.photo img {
+  border-radius: 30rem;
+}
+
 .profile figcaption,
 .profile.figcaption {
   font-size: 1.5rem;
@@ -180,15 +189,15 @@ main figure img {
   align-items: center;
   justify-content: center;
 
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
 
   border-radius: 8px;
   background-color: #105b79;
   color: #fff;
 
   text-decoration: none;
-  font-size: 28px;
+  font-size: 2rem;
 
   transition:
     background-color 0.2s ease,
@@ -211,25 +220,18 @@ main figure img {
   flex-direction: column;
 }
 
+.art-sobre h1,
+.art-sobre h2,
+.art-sobre p {
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 main section.header {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-main section.header .sobre {
-  position: relative;
-  margin-top: -15%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 5rem;
-
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .header {
@@ -331,12 +333,91 @@ main section.header .sobre {
   grid-column: span 2;
 }
 
-@media screen and (max-width: 768px) {
-  main section .sobre {
-    align-items: center;
+/* Estilo padrão (Mobile) */
+main section.header .sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2%;
+}
+
+/* Mobile */
+main section.header .sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2%;
+}
+
+.art-sobre {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+  main section.header .sobre {
+    display: flex;
     flex-direction: column;
+    position: relative;
     gap: 2rem;
     padding: 2%;
+    align-items: center;
+    margin-top: -15%;
+    width: 80%;
+  }
+
+  .art-sobre {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .btn-social {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1278px) {
+  main section.header .sobre {
+    position: relative;
+    margin-top: -15%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+
+    width: 80%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ilustracoes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ilustracoes .btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .btn-social {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
   }
 
   .destaques-grid {
@@ -356,8 +437,8 @@ main section.header .sobre {
   }
 
   main article p {
-    font-size: 1.2rem;
     width: 100%;
+    font-size: 1.2rem;
   }
 
   .bg-gif {
@@ -365,6 +446,6 @@ main section.header .sobre {
   }
 
   main h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
