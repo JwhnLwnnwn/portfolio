@@ -3,24 +3,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 7.5rem;
   padding: 2rem 1rem;
   background-color: #161616;
   overflow: hidden;
   text-align: center;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/animacoes/leeGaara.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.45;
-  z-index: 0;
-  background-position: 50% 80%;
 }
 
 footer span {

@@ -76,14 +76,13 @@ article .producoes p {
 .techs {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
 }
 
 main section .cards-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.25rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -98,7 +97,7 @@ main section .cards-container {
   width: 3rem;
   height: 3rem;
   flex-shrink: 0;
-  background-color: #3d3d3d;
+  background-color: #161616;
   border-radius: 0.5rem;
   transition:
     transform 0.2s ease-in-out,
@@ -176,7 +175,7 @@ main figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   min-width: 0;
   max-width: 100%;
 }
@@ -197,7 +196,7 @@ main figure img {
   width: min(20rem, 100%);
   height: auto;
   border-radius: 8px;
-  margin-top: 6%;
+  margin-top: 0%;
   margin-bottom: 2%;
 }
 
