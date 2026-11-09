@@ -19,6 +19,15 @@ main section .grid-container {
   padding: 6px;
 }
 
+.grid-container .grid video {
+  display: block;
+  margin: 0 auto;
+  width: 620px;
+  height: auto;
+  border-radius: 8px;
+  padding: 6px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
