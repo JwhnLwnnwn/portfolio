@@ -11,15 +11,21 @@ main section .grid-container {
 }
 
 .grid-container .grid img {
-  width: 155px;
-  height: auto; 
+  max-width: 100%;
+  height: auto;
+  display: block;
   border-radius: 8px;
   padding: 6px;
 }
 
+.grid figure img {
+    display: block;
+    margin: 0 auto;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* exatamente 6 por linha */
+  grid-template-columns: repeat(2, 1fr); /* exatamente 6 por linha */
   gap: 1rem; /* espaço entre as figuras */
   justify-items: center; /* centraliza cada figure */
 }
@@ -30,12 +36,16 @@ figcaption {
 
 @media screen and (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(1, 1fr);
+    .grid-container .grid img {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 4fr);
+@media screen and (max-width: 425px) {
+  .grid-container .grid img {
+    width: 75%;
   }
 }
