@@ -1,287 +1,307 @@
 <!doctype html>
 <html lang="pt-br">
-<!--A maioria dos elementos no <head> não são visuais, são para armazenar dados-->
+  <!--A maioria dos elementos no <head> não são visuais, são para armazenar dados-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://raw.githubusercontent.com/JwhnLwnnwn/portfolio/main/img/animacoes/MortedeHaku.gif"
+    />
+    <!--Esse é o título do meu site-->
+    <title>Portfólio</title>
+    <!--Estou unindo o meu html ao meu CSS (Tela Inicial)-->
+    <link rel="stylesheet" href="./css-telaInicial/reset.css" />
+    <link rel="stylesheet" href="./css-telaInicial/footer.css" />
+    <link rel="stylesheet" href="./css-telaInicial/main.css" />
 
-  <link rel="preload" as="image"
-    href="https://raw.githubusercontent.com/JwhnLwnnwn/portfolio/main/img/animacoes/MortedeHaku.gif" />
-  <!--Esse é o título do meu site-->
-  <title>Portfólio</title>
-  <!--Estou unindo o meu html ao meu CSS (Tela Inicial)-->
-  <link rel="stylesheet"
-    href="./css-telaInicial/reset.css" />
-  <link rel="stylesheet"
-    href="./css-telaInicial/footer.css" />
-  <link rel="stylesheet"
-    href="./css-telaInicial/main.css" />
+    <!--Fontes utilizadas (Referência os links oferecidos pelo Google Fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Ícone utilizado na aba do navegador e na navegação-->
+    <script
+      src="https://kit.fontawesome.com/493256260c.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+        if (!form) return;
 
-  <!--Fontes utilizadas (Referência os links oferecidos pelo Google Fonts)-->
-  <link rel="preconnect"
-    href="https://fonts.googleapis.com" />
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <!--Ícone utilizado na aba do navegador e na navegação-->
-  <script
-    src="https://kit.fontawesome.com/493256260c.js"
-    crossorigin="anonymous" defer></script>
-  <link rel="icon" type="image/png"
-    href="img/icones/icone4.png" />
-</head>
-<!--class= é uma forma de criar uma identificação para elemento ou sessões-->
-<!--A parte visível do html-->
+        const submitBtn = document.getElementById("submit-btn");
+        const btnText = document.getElementById("submit-text");
+        const btnLoader = document.getElementById("btn-loader");
 
-<body>
-  <!--Principal (fica no meio)-->
-  <main>
-    <div class="bg-gif"></div>
-    <section class="header">
-      <div class="sobre">
-        <!--Tag semântica para declarar imagem-->
-        <figure class="photo">
-          <img src="./img/outros/foto.png"
-            alt="Imagem de John" />
-          <figcaption
-            class="profile figcaption">
-            John Lennon Fernandes de
-            Andrade
-          </figcaption>
-          <p class="profile description">
-            UI/UX Designer Jr.| 2D/3D
-            Artist | Front-end enthusiast
-          </p>
-          <div class="social-medias-line">
-            <!-- Linkedin -->
-            <a href="https://www.linkedin.com/in/john-lennon-fernandes-5a835536b"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-social linkedin"
-              aria-label="Perfil do LinkedIn">
-              <i
-                class="fa-brands fa-linkedin"></i>
-            </a>
-            <!-- Email -->
-            <a href="mailto:andrade.cuncas@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-social gmail"
-              aria-label="Enviar um email para John">
-              <i
-                class="fa fa-envelope-o fa-fw"></i>
-            </a>
-            <a href="https://jwhnlwnnwn.itch.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-social gmail"
-              aria-label="Acessar a página do Itch.io de John">
-              <i
-                class="fa-brands fa-itch-io"></i>
-            </a>
-          </div>
-          <!--figcaption é apenas a legenda-->
-          <!--O que é esse alt?-->
-        </figure>
+        const loadingMsg = document.getElementById("feedback-loading");
+        const successMsg = document.getElementById("feedback-success");
+        const errorMsg = document.getElementById("feedback-error");
 
-        <article class="art-sobre">
-          <h2>Sobre mim</h2>
-          <p>
-            Designer e artista digital
-            focado em UI/UX, animação,
-            criação de
-            assets e com conhecimento
-            prático de HTML e
-            CSS.<br /><br />
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
 
-            Atualmente me dedico ao
-            desenvolvimento de interfaces,
-            à produção
-            de animações e ilustrações
-            digitais. Busco sempre
-            aprimorar minhas
-            habilidades e explorar novas
-            possibilidades.
-            <br /><br />
-          </p>
+          const honey = document.getElementById("honey")?.value;
+          if (honey) return;
 
-          <article class="producoes">
-            <h2>Artes</h2>
-            <p>Clique nos botões abaixo
-              para navegar</p>
-          </article>
+          if (submitBtn) submitBtn.disabled = true;
+          btnText?.classList.add("hidden");
+          btnLoader?.classList.remove("hidden");
 
-          <!--Elementos secundários (está dentro de section, junto de article)-->
+          loadingMsg?.classList.remove("hidden");
+          successMsg?.classList.add("hidden");
+          errorMsg?.classList.add("hidden");
 
-          <section class="ilustracoes">
-            <!--Botões-->
-            <a href="./projetos/vetorial.html"
-              class="btn">Vetorial</a>
-            <!--<a href="./projetos/pixelArt.html"
+          try {
+            const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+
+            const response = await fetch(form.action, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success === "true") {
+              form.reset();
+              successMsg?.classList.remove("hidden");
+            } else {
+              throw new Error(result.message || "Falha no envio");
+            }
+          } catch (error) {
+            errorMsg?.classList.remove("hidden");
+          } finally {
+            if (submitBtn) submitBtn.disabled = false;
+            btnText?.classList.remove("hidden");
+            btnLoader?.classList.add("hidden");
+            loadingMsg?.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+    <link rel="icon" type="image/png" href="img/icones/icone4.png" />
+  </head>
+  <!--class= é uma forma de criar uma identificação para elemento ou sessões-->
+  <!--A parte visível do html-->
+
+  <body>
+    <!--Principal (fica no meio)-->
+    <main>
+      <div class="bg-gif"></div>
+      <section class="header">
+        <div class="sobre">
+          <!--Tag semântica para declarar imagem-->
+          <figure class="photo">
+            <img src="./img/outros/foto.png" alt="Imagem de John" />
+            <figcaption class="profile figcaption">
+              John Lennon Fernandes de Andrade
+            </figcaption>
+            <p class="profile description">
+              UI/UX Designer Jr.| 2D/3D Artist | Front-end enthusiast
+            </p>
+            <div class="social-medias-line">
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/in/john-lennon-fernandes-5a835536b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social linkedin"
+                aria-label="Perfil do LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a
+                href="mailto:andrade.cuncas@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social gmail"
+                aria-label="Enviar um email para John"
+              >
+                <i class="fa fa-envelope-o fa-fw"></i>
+              </a>
+              <a
+                href="https://jwhnlwnnwn.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-social gmail"
+                aria-label="Acessar a página do Itch.io de John"
+              >
+                <i class="fa-brands fa-itch-io"></i>
+              </a>
+            </div>
+            <!--figcaption é apenas a legenda-->
+            <!--O que é esse alt?-->
+          </figure>
+
+          <article class="art-sobre">
+            <h2>Sobre mim</h2>
+            <p>
+              Designer e artista digital focado em UI/UX, animação, criação de
+              assets e com conhecimento prático de HTML e CSS.<br /><br />
+
+              Atualmente me dedico ao desenvolvimento de interfaces, à produção
+              de animações e ilustrações digitais. Busco sempre aprimorar minhas
+              habilidades e explorar novas possibilidades.
+              <br /><br />
+            </p>
+
+            <article class="producoes">
+              <h2>Artes</h2>
+              <p>Clique nos botões abaixo para navegar</p>
+            </article>
+
+            <!--Elementos secundários (está dentro de section, junto de article)-->
+
+            <section class="ilustracoes">
+              <!--Botões-->
+              <a href="./projetos/vetorial.html" class="btn">Vetorial</a>
+              <!--<a href="./projetos/pixelArt.html"
               class="btn">Pixel Arts</a>-->
-            <a href="./projetos/pixelArt.html"
-              class="btn">Pixel Art</a>
-            <a href="./projetos/animacoes.html"
-              class="btn">Pixel Art - Animação</a>
-            <a href="./projetos/modelos3d.html"
-              class="btn">3D</a>
-          </section>
+              <a href="./projetos/pixelArt.html" class="btn">Pixel Art</a>
+              <a href="./projetos/animacoes.html" class="btn"
+                >Pixel Art - Animação</a
+              >
+              <a href="./projetos/modelos3d.html" class="btn">3D</a>
+            </section>
 
-          <section class="techs"
-            aria-labelledby="techs-title">
-            <h2 id="techs-title">
-              Ferramentas e tecnologias
-            </h2>
+            <section class="techs" aria-labelledby="techs-title">
+              <h2 id="techs-title">Ferramentas e tecnologias</h2>
 
-            <ul class="cards-container">
-              <li class="card"
-                title="Figma">
-                <img
-                  src="img/techs/figma.png"
-                  alt="" />
-              </li>
+              <ul class="cards-container">
+                <li class="card" title="Figma">
+                  <img src="img/techs/figma.png" alt="" />
+                </li>
 
-              <li class="card"
-                title="Affinity Designer">
-                <img
-                  src="img/techs/aseprite.png"
-                  alt="Aseprite" />
-              </li>
+                <li class="card" title="Affinity Designer">
+                  <img src="img/techs/aseprite.png" alt="Aseprite" />
+                </li>
 
-              <li class="card"
-                title="Illustrator">
-                <img
-                  src="img/techs/illustrator.png"
-                  alt="" />
-              </li>
+                <li class="card" title="Illustrator">
+                  <img src="img/techs/illustrator.png" alt="" />
+                </li>
 
-              <li class="card"
-                title="Photoshop">
-                <img
-                  src="img/techs/photoshop.png"
-                  alt="" />
-              </li>
+                <li class="card" title="Photoshop">
+                  <img src="img/techs/photoshop.png" alt="" />
+                </li>
 
-              <li class="card"
-                title="After Effects">
-                <img
-                  src="img/techs/Adobe_After_Effects_CC_2026_icon.png"
-                  alt="" />
-              </li>
+                <li class="card" title="After Effects">
+                  <img
+                    src="img/techs/Adobe_After_Effects_CC_2026_icon.png"
+                    alt=""
+                  />
+                </li>
 
-              <li class="card"
-                title="Blender">
-                <img
-                  src="img/techs/blender.svg"
-                  alt="" />
-              </li>
+                <li class="card" title="Blender">
+                  <img src="img/techs/blender.svg" alt="" />
+                </li>
 
-              <li class="card"
-                title="Affinity Designer">
-                <img
-                  src="img/techs/affinity.png"
-                  alt="Affinity" />
-              </li>
+                <li class="card" title="Affinity Designer">
+                  <img src="img/techs/affinity.png" alt="Affinity" />
+                </li>
 
-              <li class="card"
-                title="CSS3">
-                <i class="devicon-css3-plain colored"
-                  aria-hidden="true"></i>
-              </li>
-            </ul>
-          </section>
-        </article>
-      </div>
-    </section>
-
-    <section class="destaques">
-      <h2>UI/UX</h2>
-      <div class="destaques-grid">
-        <div class="grid-item">
-          <div class="imgs">
-            <img
-              aria-label="Thumbnail do projeto dev bits"
-              src="assets/redesign/thumbnail.png"
-              alt="" />
-
-            <img
-              aria-label="Imagem dos fluxos de usuário e telas"
-              src="assets/redesign/flows.png"
-              alt="" />
-          </div>
-          <h3>
-            <a href="https://www.figma.com/design/FYQfZlGar9xpoo8wuyWwIi/PONTO-GO---Teste-pr%C3%A1tico?node-id=0-1&t=JaDZ6lXk68B3k7dd-1"
-              target="_blank"
-              rel="noopener noreferrer">Redesign
-              do site Ponto GO</a>
-          </h3>
-          <p>
-            Desenvolvi uma adaptação mobile
-            do site de controle de ponto,
-            "Ponto GO". Mantive sua
-            identidade visual, focando na
-            reorganização dos elementos,
-            acessibilidade ao toque,
-            clareza da
-            navegação e adaptação dos
-            padrões de interação ao espaço
-            reduzido.
-
-            <br />
-            <a href="https://docs.google.com/document/d/1OZuXl5b1qBV7tR-_UCqqDlQB2xs677MtBz7y7d_IjMI/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer">Saiba
-              mais sobre o projeto</a>
-          </p>
+                <li class="card" title="CSS3">
+                  <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+                </li>
+              </ul>
+            </section>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="destaques">
-      <div class="destaques-grid">
-        <div class="grid-item">
-          <div class="imgs">
-            <img
-              aria-label="Imagem dentro do laboratório interno do simulador"
-              src="assets/redesign/vrsl/interno-game.jfif"
-              alt="" />
-            <img
-              aria-label="Roteiro universal desenvolvido para planejamento de aulas"
-              src="assets/redesign/vrsl/Roteiro.png"
-              alt="" />
+      <section class="destaques">
+        <h2>UI/UX</h2>
+        <div class="destaques-grid">
+          <div class="grid-item">
+            <div class="imgs">
+              <img
+                aria-label="Thumbnail do projeto dev bits"
+                src="assets/redesign/thumbnail.png"
+                alt=""
+              />
+
+              <img
+                aria-label="Imagem dos fluxos de usuário e telas"
+                src="assets/redesign/flows.png"
+                alt=""
+              />
+            </div>
+            <h3>
+              <a
+                href="https://www.figma.com/design/FYQfZlGar9xpoo8wuyWwIi/PONTO-GO---Teste-pr%C3%A1tico?node-id=0-1&t=JaDZ6lXk68B3k7dd-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Redesign do site Ponto GO</a
+              >
+            </h3>
+            <p>
+              Desenvolvi uma adaptação mobile do site de controle de ponto,
+              "Ponto GO". Mantive sua identidade visual, focando na
+              reorganização dos elementos, acessibilidade ao toque, clareza da
+              navegação e adaptação dos padrões de interação ao espaço reduzido.
+
+              <br />
+              <a
+                href="https://docs.google.com/document/d/1OZuXl5b1qBV7tR-_UCqqDlQB2xs677MtBz7y7d_IjMI/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Saiba mais sobre o projeto</a
+              >
+            </p>
           </div>
-          <h3>
-            <a href="https://www.figma.com/proto/mFbaZYDXiGj6WixKamEZ5P/DIG---Buscap%C3%A9?page-id=51%3A2&node-id=51-3&viewport=897%2C113%2C0.27&t=022UwLwcSSwI8bTb-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=51%3A3"
-              target="_blank"
-              rel="noopener noreferrer">Simulador
-              VSRL (GREI)</a>
-          </h3>
-          <p>
-            Com outros 5 integrantes,
-            colaborei na reformulação dos
-            elementos UI e UX do simulador
-            Virtual Reality Substation,
-            onde participei da
-            documentação, gestão,
-            articulação com o cliente e
-            interna, colaborei com o UI
-            Design e na produção
-            de assets adaptados.
-            <br />
-            <a href="https://github.com/grei-ufc/vrslab"
-              target="_blank"
-              rel="noopener noreferrer">Saiba
-              mais sobre o projeto</a>
-          </p>
         </div>
-      </div>
-    </section>
-    <!--
+      </section>
+
+      <section class="destaques">
+        <div class="destaques-grid">
+          <div class="grid-item">
+            <div class="imgs">
+              <img
+                aria-label="Imagem dentro do laboratório interno do simulador"
+                src="assets/redesign/vrsl/interno-game.jfif"
+                alt=""
+              />
+              <img
+                aria-label="Roteiro universal desenvolvido para planejamento de aulas"
+                src="assets/redesign/vrsl/Roteiro.png"
+                alt=""
+              />
+            </div>
+            <h3>
+              <a
+                href="https://www.figma.com/proto/mFbaZYDXiGj6WixKamEZ5P/DIG---Buscap%C3%A9?page-id=51%3A2&node-id=51-3&viewport=897%2C113%2C0.27&t=022UwLwcSSwI8bTb-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=51%3A3"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Simulador VSRL (GREI)</a
+              >
+            </h3>
+            <p>
+              Com outros 5 integrantes, colaborei na reformulação dos elementos
+              UI e UX do simulador Virtual Reality Substation, onde participei
+              da documentação, gestão, articulação com o cliente e interna,
+              colaborei com o UI Design e na produção de assets adaptados.
+              <br />
+              <a
+                href="https://github.com/grei-ufc/vrslab"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Saiba mais sobre o projeto</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--
       <section class="destaques">
         <div class="destaques-grid">
           <div class="grid-item">
@@ -325,74 +345,75 @@
         </div>
       </section>
 -->
-    <section class="destaques">
-      <h2>Game Dev Journey</h2>
-      <div class="destaques-grid">
-        <div class="grid-item">
-          <div class="imgs">
-            <img
-              aria-label="Thumbnail do projeto A MIRA"
-              src="assets/capas/data_deck/thumb datadeck.png"
-              alt="" />
-            <img
-              aria-label="Imagem da proposta de gameplay do projeto A MIRA"
-              src="assets/capas/data_deck/mockup3-gameplay.png"
-              alt="" />
+      <section class="destaques">
+        <h2>Game Dev Journey</h2>
+        <div class="destaques-grid">
+          <div class="grid-item">
+            <div class="imgs">
+              <img
+                aria-label="Thumbnail do projeto A MIRA"
+                src="assets/capas/data_deck/thumb datadeck.png"
+                alt=""
+              />
+              <img
+                aria-label="Imagem da proposta de gameplay do projeto A MIRA"
+                src="assets/capas/data_deck/mockup3-gameplay.png"
+                alt=""
+              />
+            </div>
+            <h3>
+              <a href="" target="_blank" rel="noopener noreferrer">DataDeck</a>
+            </h3>
+            <p>
+              Líder artístico do protótipo educacional DataDeck. Produzi a
+              identidade visual, UI/UX, animações e conduzi o teste de
+              usabilidade usando a metodologia Think Aloud e a Escala de Likert.
+              <br />
+              <a
+                href="https://youtu.be/-28SBsyfyZE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Confira o vídeo do projeto completo</a
+              >
+            </p>
           </div>
-          <h3>
-            <a href="" target="_blank"
-              rel="noopener noreferrer">DataDeck</a>
-          </h3>
-          <p>
-            Líder artístico do protótipo
-            educacional DataDeck. Produzi a
-            identidade visual, UI/UX,
-            animações e conduzi o teste de
-            usabilidade
-            usando a metodologia Think
-            Aloud e a Escala de Likert.
-            <br />
-            <a href="https://youtu.be/-28SBsyfyZE"
-              target="_blank"
-              rel="noopener noreferrer">
-              Confira o vídeo do projeto
-              completo</a>
-          </p>
-        </div>
 
-        <div class="grid-item">
-          <div class="imgs">
-            <img
-              aria-label="Thumbnail do projeto A MIRA"
-              src="./assets/capas/A MIRA/thumb_amira.png" />
-            <img
-              aria-label="Imagem da proposta de gameplay do projeto A MIRA"
-              src="assets/capas/A MIRA/Hand.png"
-              alt="" />
-          </div>
-          <a href="https://www.behance.net/gallery/246919691/A-Mira-TechDemo-2D-Arts-and-Animation"
-            target="_blank"
-            rel="noopener noreferrer">
-            <h3>A MIRA</h3>
-          </a>
-          <p>
-            Líder do processo de UI/UX para
-            o protótipo A MIRA. Produzi o
-            fluxo do usuário, wireframes,
-            identidade visual, animações,
-            prototipação em Figma e
-            tipografia.
-            <br />
-            <a href="https://www.youtube.com/watch?v=DP0stRMmVZs&feature=youtu.be"
+          <div class="grid-item">
+            <div class="imgs">
+              <img
+                aria-label="Thumbnail do projeto A MIRA"
+                src="./assets/capas/A MIRA/thumb_amira.png"
+              />
+              <img
+                aria-label="Imagem da proposta de gameplay do projeto A MIRA"
+                src="assets/capas/A MIRA/Hand.png"
+                alt=""
+              />
+            </div>
+            <a
+              href="https://www.behance.net/gallery/246919691/A-Mira-TechDemo-2D-Arts-and-Animation"
               target="_blank"
-              rel="noopener noreferrer">Confira
-              o vídeo do projeto
-              completo</a>
-          </p>
+              rel="noopener noreferrer"
+            >
+              <h3>A MIRA</h3>
+            </a>
+            <p>
+              Líder do processo de UI/UX para o protótipo A MIRA. Produzi o
+              fluxo do usuário, wireframes, identidade visual, animações,
+              prototipação em Figma e tipografia.
+              <br />
+              <a
+                href="https://www.youtube.com/watch?v=DP0stRMmVZs&feature=youtu.be"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Confira o vídeo do projeto completo</a
+              >
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <!--
+      </section>
+      <!--
     <section class="destaques">
       <div class="destaques-grid">
         <h2>DEV Bits</h2>
@@ -475,15 +496,121 @@
         </div>
       </div>
     </section> -->
-  </main>
 
-  <footer>
-    <span>
-      &copy; John Lennon Fernandes de
-      Andrade, 2026. Todos os direitos
-      reservados.
-    </span>
-  </footer>
-</body>
+      <div class="contact-footer" id="contact">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2 class="contact-title">Contato</h2>
+            <p class="contact-description">
+              Sinta-se livre para enviar mensagem no geral, questões, vagas,
+              comissões de arte ou se quiser trabalhar junto em projetos.
+            </p>
+          </div>
 
+          <div class="contact-form-wrapper">
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="https://formsubmit.co/ajax/13dbc758b07905741745812c0544cc4b"
+              method="POST"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
+              <input
+                type="text"
+                name="_honey"
+                id="honey"
+                class="hidden"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <div class="form-group">
+                <label for="name" class="form-label">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  class="field-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Seu email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  maxlength="120"
+                  class="field-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  minlength="5"
+                  maxlength="2000"
+                  class="field-input field-textarea"
+                ></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="submit-btn">
+                <span id="submit-text">Enviar</span>
+                <svg
+                  id="btn-loader"
+                  class="spinner hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="spinner-track"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="spinner-head"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+
+            <p id="feedback-loading" class="form-feedback hidden">
+              Enviando mensagem...
+            </p>
+
+            <p id="feedback-success" class="form-feedback success hidden">
+              Mensagem enviada com sucesso. Aguarde o contato! @_@
+            </p>
+
+            <p id="feedback-error" class="form-feedback error hidden">
+              Erro ao enviar mensagem. Tente novamente mais tarde.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>
+        &copy; John Lennon Fernandes de Andrade, 2026. Todos os direitos
+        reservados.
+      </span>
+    </footer>
+  </body>
 </html>
