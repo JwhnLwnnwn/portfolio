@@ -7,15 +7,16 @@
   font-family: "Outfit", "Montserrat", sans-serif;
 }
 
-body { /*Alteração no escopo do body*/
-  width: 100%;
-  height: 100vh;
+body {
+    width: 100%;
+    min-height: 100vh;
 
-  background-color: #222222;
-  color: #ffff; /*Altera a cor do texto*/
-  display: flex; /*Torna todos os elementos dentro em peças flexíveis*/
-  flex-direction: column; /*Ordena verticalmente os elementos (O padrão é horizontal)*/
-  justify-content: space-between; /*Prende o cabeçalho e o rodapé no topo e fundo, o resto fica espaçado igualmente*/
+    background-color: #222222;
+    color: #ffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 a {
